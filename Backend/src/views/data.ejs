@@ -1,0 +1,104 @@
+<%- include("templates/cabeza") %>
+  <br>
+  <h1>Hola Bienvenido, <%= " " + titulo %>
+  </h1>
+  <div class="album py-5">
+    <div class="container">
+      <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 g-3">
+
+        <div class="col-sm-4">
+          <h3>Ingresa los datos</h3>
+          <form action="" method="post">
+
+            <label for="name">nombre:</label><br>
+            <input type="text" class="form-control" name="name" required><br>
+            <label for="ubication">ubicación:</label><br>
+            <input type="text" class="form-control" name="ubication" required><br>
+            <label for="description">descripción:</label><br>
+            <textarea type="text" class="form-control" rows="5" id="description" name="description"
+              required></textarea><br>
+            <label for="metros">metros:</label><br>
+            <input type="text" id="description" name="metros" required><br>
+            <label for="image">Url imagen:</label><br>
+            <input type="text" class="form-control" id="image" name="image" required><br>
+            <button type="submit" id="crear_elem" name="crear_elem" value="crear_elem">Crear</button><br>
+          </form>
+        </div>
+
+        <div class="col-sm-4 text-center">
+          <form action="" method="post">
+            <label for="id">ELIMINAR ingresa el id:</label><br>
+            <input type="text" id="id" name="id"><br>
+            <button type="submit" id="elimi_elem" name="elimi_elem" value="elimi_elem">Elimina</button>
+          </form>
+        </div>
+
+        <div class="col-sm-4">
+
+          <div class="card-body">
+            <p class="card-text dos">En esta sección tienes la posibilidad
+              de dar a conocer tu proyecto, señalar sus características
+              distintivas y además un detalle de su ubicación. Si requieres
+              realizar una modificación está el botón edit, donde se habilita
+              una opción para generar esto.<br>
+              Esta es una tarjeta más amplia con texto
+              de apoyo a continuación como una introducción natural a
+              contenido adicional. Este contenido es un poco más largo.
+              Esta es una tarjeta más amplia con texto de apoyo a continuación
+              como una introducción natural a contenido adicional. Este
+              contenido es un poco más largo.
+            </p>
+
+
+          </div>
+
+
+        </div>
+
+      </div>
+    </div>
+  </div>
+  <br>
+
+
+  <section class="d-flex justify-content-evenly flex-wrap">
+    <% nuevo.forEach((cliente)=> { %>
+      <div class="card my-3" style="width: 22rem;">
+        <img src=<%=cliente.image %> class="card-img-top" alt=<%= cliente.name %>>
+          <div class="card-body">
+            Id:<%= cliente.id %>
+              <h5 class="card-title">
+                <%= cliente.name %>
+              </h5>
+              <p class="card-text">
+                <%= cliente.ubication %>
+              </p>
+              <p class="card-text">
+                <%= cliente.description %>
+              </p>
+              <p class="card-text">
+                <%= cliente.metros %>
+              </p>
+              <a href="/views/edit/<%= cliente.id %>" class="btn btn-primary mx-1">edit</a><a href=<%=cliente.image %>
+                target="_blank" class="btn btn-primary">Ver</a>
+          </div>
+      </div>
+      <% }); %>
+  </section>
+
+  <!-- --------------------------------------------- -->
+
+
+  <!-- ------------------------------------- -->
+  <div class="col text-center">
+    <h1>
+      <%= texto2 %>
+    </h1>
+
+    <p>
+      <%= texto2 %>
+    </p>
+  </div>
+
+
+  <%- include("templates/pie") %>

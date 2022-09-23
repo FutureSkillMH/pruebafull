@@ -1,0 +1,70 @@
+<%- include("templates/cabeza") %>
+
+  <div class="container mt-5" style="background-color:rgb(225, 241, 241)">
+    <div class="row">
+      <div class="col-sm-3">
+
+        <div class="card-body">
+
+
+        </div>
+
+
+      </div>
+      <div class="col-sm-6">
+        <h3>Actualiza un campo</h3>
+        <% proyecto.forEach((cliente)=> { %>
+          <form action="" method="post">
+
+            <label for="name">nombre:</label><br>
+            <input type="text" class="form-control" name="name" value="<%= cliente.name %>"><br>
+            <label for="tagline">ubicación:</label><br>
+            <input type="text" class="form-control" name="ubication" value="<%= cliente.ubication %>"><br>
+            <label for="description">descripción:</label><br>
+            <textarea type="text" class="form-control" rows="5" name="description"><%= cliente.description %></textarea><br>
+            <label for="description">metros:</label><br>
+            <input type="text" class="form-control" name="metros" value="<%= cliente.metros %>"><br>
+
+            <label for="image">Url imagen:</label><br>
+            <input type="text" class="form-control" name="image" value="<%= cliente.image %>"><br>
+
+            <button type="submit">Actualizar</button>
+
+          </form><br>
+          <% }); %>
+
+      </div>
+
+      <div class="col-sm-3">
+
+        <div class="card-body">
+
+
+        </div>
+
+
+      </div>
+    </div>
+    <br>
+
+
+    <div class="row text-center">
+      <div class="col-sm-4">
+        <h3>Columna 1</h3>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit...</p>
+        <p>Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris...</p>
+      </div>
+      <div class="col-sm-4">
+        <h3>Columna 2</h3>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit...</p>
+        <p>Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris...</p>
+      </div>
+      <div class="col-sm-4">
+        <h3>Columna 3</h3>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit...</p>
+        <p>Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris...</p>
+      </div>
+    </div>
+  </div>
+
+  <%- include("templates/pie") %>

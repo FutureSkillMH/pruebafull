@@ -1,0 +1,27 @@
+
+
+
+h1{
+    color: rgb(20, 19, 19);
+    font-family: gabriola;
+    text-align: center;
+    font-size: 48px;
+}
+
+
+
+.pie p{
+    font-size: 17px;
+    text-align: center;
+    padding-top: 70px;
+    padding-bottom: 70px;
+    background-color: black;
+    color: aliceblue;
+    margin-bottom: 0px;
+    margin-top: 30px;
+  }
+  .dos{
+
+    text-align: justify;
+    word-spacing: -2.5px;
+  }
